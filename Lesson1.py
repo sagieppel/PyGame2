@@ -18,3 +18,4 @@ for i in range(100000000):
    pygame.draw.circle(screen, [red,green,blue], [x,y], scale)
    pygame.display.update()
    
+   
