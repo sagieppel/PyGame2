@@ -12,9 +12,10 @@ for i in range(100000000):
    red=random.randint(0,255)
    green=random.randint(0,255)
    blue=random.randint(0,255)
-  # x=random.randint(0,600)
-  # y=random.randint(0,600)
-   scale=random.randint(0,55)
+   x=x+random.randint(-50,50)
+   y=y+random.randint(-50,50)
+   scale=random.randint(0,5)
+   pygame.time.delay(5)
    pygame.draw.circle(screen, [red,green,blue], [x,y], scale)
    pygame.display.update()
    
