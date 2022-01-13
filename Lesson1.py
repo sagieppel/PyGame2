@@ -1,6 +1,15 @@
 import pygame 
 pygame.init()
-screen=pygame.display.set_mode([500,500]) 
-for i in range(100000):
-   pygame.draw.circle(screen, [0,255,0], [200,200], 20)
+
+screenSize=600
+screen=pygame.display.set_mode([screenSize,screenSize]) 
+
+for i in range(100000000):
+   red=255
+   green=0
+   blue=100
+   x=200
+   y=200
+   scale=10
+   pygame.draw.circle(screen, [red,green,blue], [x,y], scale)
    pygame.display.update()
