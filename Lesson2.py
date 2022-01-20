@@ -3,16 +3,20 @@ import random
 
 ###############################################################################3
 def createCircle(x,y):
-   red=random.randint(0,255)
-   green=random.randint(0,255)
-   blue=random.randint(0,255)
+   circle = {}
    
-  # x=x+random.randint(-50,50)
-  # y=y+random.randint(-50,50)
    
-   scale= 20# random.randint(0,5)
+   circle["red"]=random.randint(0,255)
+   circle["green"]=random.randint(0,255)
+   circle["blue"]=random.randint(0,255)
+   
+   circle['x']=x#+random.randint(-50,50)
+   circle['y']=y#+random.randint(-50,50)
+   
+   circle["scale"]= 20# random.randint(0,5)
    #pygame.time.delay(5)
-   pygame.draw.circle(screen, [red,green,blue], [x,y], scale)
+   
+   pygame.draw.circle(screen, [circle["red"], circle["green"], circle["blue"]], [circle['x'],circle['y']], circle["scale"])
    pygame.display.update()
 ###############################################################################
 
