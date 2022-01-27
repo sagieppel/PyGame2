@@ -4,12 +4,12 @@ import random
 #-----------------Create a circle--------------------------------------------------------
 def create(x,y):
   circle={}
-  circle["color"]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+  circle["color"]=[255, 255, 255]
   circle["x"]=x #random.randint(0,255)
   circle["y"]=y #random.randint(0,255)
-  circle["size"]= random.randint(1,10)
-  circle["xspeed"]=random.randint(-100,100)/1000
-  circle["yspeed"]=random.randint(-100,100)/1000
+  circle["size"]= random.randint(1,20)
+  circle["xspeed"]=0#random.randint(-100,100)/1000
+  circle["yspeed"]=0#random.randint(-100,100)/1000
   circle["noise"]=0.01
   return circle
   
@@ -29,6 +29,12 @@ for i in range(100):
      ar.append(circle)
 #----------------------------Main loop--------------------------------------------------------------------
 for i in range(1000000):
+    
+    pygame.event.get()
+    x,y = pygame.mouse.get_pos()
+    circle = create(x, y)
+    ar.append(circle)
+    
     pygame.Surface.fill(screen,(0,0,0))
     for circle in ar:
         update(circle)
