@@ -7,9 +7,9 @@ def create(x,y):
   circle["color"]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
   circle["x"]=x #random.randint(0,255)
   circle["y"]=y #random.randint(0,255)
-  circle["size"]=10#random.randint(10,100)
-  circle["xspeed"]=0.1
-  circle["yspeed"]=0.1
+  circle["size"]= random.randint(1,10)
+  circle["xspeed"]=random.randint(-100,100)/1000
+  circle["yspeed"]=random.randint(-100,100)/1000
   return circle
   
 #------------------Draw a circle--------------------------------------------------------
@@ -22,13 +22,15 @@ def update(circle):
 pygame.init()
 screensize=700
 screen=pygame.display.set_mode([screensize,screensize])
-
-
-circle = create(300, 400)
+ar=[]
+for i in range(100):
+     circle = create(300, 400)
+     ar.append(circle)
 #----------------------------Main loop--------------------------------------------------------------------
 for i in range(1000000):
     pygame.Surface.fill(screen,(0,0,0))
-    update(circle)
+    for circle in ar:
+        update(circle)
     pygame.display.update()
     
  
