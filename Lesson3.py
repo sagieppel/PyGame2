@@ -1,6 +1,6 @@
 import pygame
 import random
-#-----------------Create a circle at X,Y--------------------------------------------------------
+#-----------------Create a circle--------------------------------------------------------
 def create(x,y):
   circle={}
   circle["color"]=(random.randint(0,255),random.randint(0,255),random.randint(0,255))
