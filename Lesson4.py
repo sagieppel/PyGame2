@@ -35,12 +35,15 @@ for i in range(400):
      circle = create(random.randint(100,200), random.randint(100,200))
      ar.append(circle)
 #----------------------------Main loop--------------------------------------------------------------------
+img=pygame.image.load('space.jfif')
+
 for i in range(1000000):
     
     ev=pygame.event.get()
     x,y = pygame.mouse.get_pos()
+    screen.blit(img,(0,0))
 
-    pygame.Surface.fill(screen,(0,0,0))
+  #  pygame.Surface.fill(screen,(0,0,0))
     for circle in ar:
         update(circle)
     pygame.display.update()
