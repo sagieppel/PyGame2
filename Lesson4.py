@@ -36,7 +36,7 @@ for i in range(400):
      ar.append(circle)
 #----------------------------Main loop--------------------------------------------------------------------
 img=pygame.image.load('space.jfif')
-
+img = pygame.transform.scale(img, (1280, 720))
 for i in range(1000000):
     
     ev=pygame.event.get()
