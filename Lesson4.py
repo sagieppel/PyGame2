@@ -7,10 +7,10 @@ def create(x,y):
   circle["color"]=[255, 255, 255] # [Red,Green,Blue]
   circle["x"]=x #random.randint(0,255)
   circle["y"]=y #random.randint(0,255)
-  circle["size"]= random.randint(1,20)
+  circle["size"]= random.randint(10,40)
   circle["xspeed"]=0#random.randint(-100,100)/1000
   circle["yspeed"]=0#random.randint(-100,100)/1000
-  circle["noise"]=0.01
+  circle["noise"]=0.005
   return circle
   
 #------------------Draw a circle--------------------------------------------------------
@@ -25,8 +25,8 @@ screensize=700
 screen=pygame.display.set_mode([screensize,screensize])
 #---------------Create cloud array------------------------------
 ar=[] # Create array
-for i in range(100):
-     circle = create(200, 200)
+for i in range(400):
+     circle = create(random.randint(100,200), random.randint(100,200))
      ar.append(circle)
 #----------------------------Main loop--------------------------------------------------------------------
 for i in range(1000000):
