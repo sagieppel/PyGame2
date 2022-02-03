@@ -17,6 +17,12 @@ def create(x,y):
 def update(circle):
     circle["x"] +=  circle["xspeed"]+random.randint(-100,100)*circle["noise"]
     circle["y"] += circle["yspeed"]+random.randint(-100,100)*circle["noise"]
+    if random.randint(0,1000)==1:
+          circle["color"]=[0, 0, 255]
+          circle["yspeed"]= 1
+          circle["size"] = 2
+          
+      
     pygame.draw.circle(screen, circle["color"], [int(circle["x"]),int(circle["y"])], int(circle["size"]))
 
 #----------------initiate pygame---------------------------------------------------------
