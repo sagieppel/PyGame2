@@ -23,7 +23,8 @@ def update(circle):
 pygame.init()
 screensize=700
 screen=pygame.display.set_mode([screensize,screensize])
-ar=[]
+#---------------Create cloud array------------------------------
+ar=[] # Create array
 for i in range(100):
      circle = create(200, 200)
      ar.append(circle)
