@@ -32,9 +32,7 @@ for i in range(1000000):
     
     pygame.event.get()
     x,y = pygame.mouse.get_pos()
-    circle = create(x, y)
-    ar.append(circle)
-    
+
     pygame.Surface.fill(screen,(0,0,0))
     for circle in ar:
         update(circle)
