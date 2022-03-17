@@ -17,5 +17,5 @@ circle["speedY"] = -1
 for i in range(1000000):
   screen.fill((0,0,0))
   circle['x'] = circle['x'] + circle["speedX"]
-  pygame.draw.circle(screen, circle["color"], [circle['x'],circle['y']], circle["radius"])
+  pygame.draw.circle(screen, circle["color"], [int(circle['x']),int(circle['y']), int(circle["radius"]))
   pygame.display.update()
