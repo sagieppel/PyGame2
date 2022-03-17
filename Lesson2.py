@@ -1,34 +1,23 @@
 import pygame 
 import random
 
-###############################################################################3
-def createCircle(x,y):
-   circle = {}
-   
-   
-   circle["red"]=random.randint(0,255)
-   circle["green"]=random.randint(0,255)
-   circle["blue"]=random.randint(0,255)
-   
-   circle['x']=x#+random.randint(-50,50)
-   circle['y']=y#+random.randint(-50,50)
+pygame.init()
+
+screensize=700
+screen=pygame.display.set_mode([screensize,screensize]) # Control screen size 
+
+red=255
+blue=0
+green=0
+x = 100
+y = 100
+size = 30
+
+for i in range(100000000):
   
-   circle["speedx"]=0.1
-   circle["speedy"]=0.1
-   
-  
-   circle["scale"]= 20# random.randint(0,5)
-   #pygame.time.delay(5)
-   color = (255,0,0)
-   pygame.draw.rect(screen, color, pygame.Rect(x, y, 60, 60))
-  # pygame.draw.circle(screen, [circle["red"], circle["green"], circle["blue"]], [circle['x'],circle['y']], circle["scale"])
-   pygame.display.update()
-###############################################################################
-# def change(circle):
-#     circle['x']+=circle["speedx"]
-#     pygame.draw.circle(screen, [circle["red"], circle["green"], circle["blue"]], [circle['x'],circle['y']], circle["scale"])
-#     pygame.display.update()
-####################################################################  
+  pygame.draw.circle(screen, [red,green,blue], [x,y], size)
+ 
+  pygame.display.update()
    
 
 
